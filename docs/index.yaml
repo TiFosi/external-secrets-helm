@@ -3,11 +3,11 @@ entries:
   external-secrets:
   - apiVersion: v2
     appVersion: 0.15.1
-    created: "2025-04-06T13:54:32.194150423+02:00"
+    created: "2025-04-06T15:00:11.768986193+02:00"
     description: This Chart allows to deploy external-secrets for External Secrets
       Operator
-    digest: c52f7b268df86ef5f876d0f7db834c207eb9cfaf7aaed54e3d9989a1d3c111b1
-    home: https://github.com/your-org/external-secrets-helm
+    digest: 270753ebc9e9310edd8cd6dc3d0cfbe76988aa6d5ed5c4493638d8b4864b48d6
+    home: https://github.com/TiFosi/external-secrets-helm
     keywords:
     - secrets
     - external-secrets
@@ -18,9 +18,9 @@ entries:
       name: Faouzi ABDELJAOUED
     name: external-secrets
     sources:
-    - https://github.com/external-secrets/external-secrets
+    - https://github.com/TiFosi/external-secrets-helm
     type: application
     urls:
     - https://tifosi.github.io/external-secrets-helm/external-secrets-0.1.0.tgz
     version: 0.1.0
-generated: "2025-04-06T13:54:32.193810966+02:00"
+generated: "2025-04-06T15:00:11.768363273+02:00"
