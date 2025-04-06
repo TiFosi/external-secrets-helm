@@ -5,14 +5,14 @@ type: application
 version: 0.1.0
 appVersion: "0.15.1" # External Secrets Operator version
 
-home: https://github.com/your-org/external-secrets-helm
+home: https://github.com/TiFosi/external-secrets-helm
 keywords:
   - secrets
   - external-secrets
   - external-secrets-operator
   - eso
 sources:
-  - https://github.com/external-secrets/external-secrets
+  - https://github.com/TiFosi/external-secrets-helm
 
 maintainers:
   - email: faouzi.abdeljaoued@gmail.com
