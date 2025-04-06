@@ -4,8 +4,8 @@ Example usage:
 
 ```yaml
 # values.yaml
-secretName: "{{ .Release.Name }}-external-secret"
 storeName: vault-cluster-secret-store
+secretName: "{{ .Release.Name }}-external-secret"
 refreshInterval: 1h
 remoteRefPath: secret/path/in/vault
 secrets:
@@ -20,11 +20,15 @@ secrets:
 
 ### 
 
+Prerequisites:
+- External Secrets Operator 0.15.1+ installed with all CRDs `ExternalSecret`, `ClusterSecretStore`, and `SecretStore`
+- A secret store (`ClusterSecretStore` or `SecretStore`) created and configured to access the external store (e.g., HashiCorp Vault, AWS Secrets Manager, etc.)
+
 | Name                       | Description                                                                                                                                                                                      | Value                                 |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------- |
-| `secretName`               | The name of the ExternalSecret & the Kubernetes Secret that will be created                                                                                                                      | `{{ .Release.Name }}-external-secret` |
 | `storeName`                | The name of the secret store                                                                                                                                                                     | `""`                                  |
 | `storeKind`                | The kind of the secret store. `ClusterSecretStore` or `SecretStore`. If undefined (the default), set to `null` or `""` then `ClusterSecretStore` is used.                                        |                                       |
+| `secretName`               | The name of the ExternalSecret & the Kubernetes Secret that will be created                                                                                                                      | `{{ .Release.Name }}-external-secret` |
 | `refreshInterval`          | The interval at which the ExternalSecret will be refreshed                                                                                                                                       | `1h`                                  |
 | `creationPolicy`           | The creation policy of the ExternalSecret. `Owner`, `Merge`, or `None`. If undefined (the default), set to `null` or `""`, then `Owner` is used.                                                 |                                       |
 | `remoteRefPath`            | The path in the external store (e.g., Vault) where all the secrets defined in the `secrets` array are stored. If not provided, the parameter must be set for each secret in the `secrets` array. | `secret/path/in/vault`                |
