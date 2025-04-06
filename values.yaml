@@ -1,0 +1,21 @@
+## @section
+##
+## @param secretName The name of the ExternalSecret & the Kubernetes Secret that will be created
+## @param storeName The name of the secret store
+## @extra storeKind The kind of the secret store. `ClusterSecretStore` or `SecretStore`. If undefined (the default), set to `null` or `""` then `ClusterSecretStore` is used.
+## @param refreshInterval The interval at which the ExternalSecret will be refreshed
+## @extra creationPolicy The creation policy of the ExternalSecret. `Owner`, `Merge`, or `None`. If undefined (the default), set to `null` or `""`, then `Owner` is used.
+## @param remoteRefPath The path in the external store (e.g., Vault) where all the secrets defined in the `secrets` array are stored. If not provided, the parameter must be set for each secret in the `secrets` array.
+## @param secrets Array of secrets to be retrieved from the external store and stored in the Kubernetes Secret
+## @extra secrets.[].key The key of the secret in the Kubernetes Secret.
+## @extra secrets.[].remoteRefPath The path to the secret in the external store if it is different from `remoteRefPath` or `remoteRefPath` is not provided.
+## @extra secrets.[].remoteKey The key of the secret in the external store if it is different from `secrets.[].key`.
+## @descriptionEnd
+secretName: "{{ .Release.Name }}-external-secret"
+storeName: ""
+refreshInterval: "1h"
+remoteRefPath: "secret/path/in/vault"
+secrets: []
+  # - key: ""
+  #   remoteKey: ""
+  #   remoteRefPath: ""

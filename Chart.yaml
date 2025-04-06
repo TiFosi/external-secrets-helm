@@ -1,0 +1,19 @@
+apiVersion: v2
+name: external-secrets
+description: This Chart allows to deploy external-secrets for External Secrets Operator
+type: application
+version: 0.1.0
+appVersion: "0.15.1" # External Secrets Operator version
+
+home: https://github.com/your-org/external-secrets-helm
+keywords:
+  - secrets
+  - external-secrets
+  - external-secrets-operator
+  - eso
+sources:
+  - https://github.com/external-secrets/external-secrets
+
+maintainers:
+  - email: faouzi.abdeljaoued@gmail.com
+    name: Faouzi ABDELJAOUED
