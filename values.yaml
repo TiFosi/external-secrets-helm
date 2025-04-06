@@ -1,7 +1,7 @@
 ## @section
 ##
 ## @descriptionStart
-## Prerequisites:
+## **Prerequisites:**
 ## - External Secrets Operator 0.15.1+ installed with all CRDs `ExternalSecret`, `ClusterSecretStore`, and `SecretStore`
 ## - A secret store (`ClusterSecretStore` or `SecretStore`) created and configured to access the external store (e.g., HashiCorp Vault, AWS Secrets Manager, etc.)
 ## @descriptionEnd
