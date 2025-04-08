@@ -15,6 +15,7 @@
 ## @extra secrets.[].key The key of the secret in the Kubernetes Secret.
 ## @extra secrets.[].remoteRefPath The path to the secret in the external store if it is different from `remoteRefPath` or `remoteRefPath` is not provided.
 ## @extra secrets.[].remoteKey The key of the secret in the external store if it is different from `secrets.[].key`.
+## @param targetTemplate Use this to set a custom template for the target secret (see https://external-secrets.io/latest/guides/templating/). This is useful for advanced use cases where you want to customize the secret data or type.
 storeName: ""
 secretName: "{{ .Release.Name }}-external-secret"
 refreshInterval: "1h"
@@ -23,3 +24,20 @@ secrets: []
   # - key: ""
   #   remoteKey: ""
   #   remoteRefPath: ""
+targetTemplate: {}
+  # type: kubernetes.io/dockerconfigjson
+  # engineVersion: v2
+  # data:
+  #   .dockerconfigjson: "{{ `{{ .mysecret }}` }}"
+
+## @param extraObjects Array of extra ExternalSecret resources to be created. This is useful for creating additional resources that are not part of the main ExternalSecret spec, such type or different secret stores. NOTE: the main `storeName` defined above will be used if not provided in the extra object.
+extraObjects: []
+  # - storeName: ""
+  #   secretName: ""
+  #   refreshInterval: ""
+  #   remoteRefPath: ""
+  #   secrets:
+  #     - key: ""
+  #       remoteKey: ""
+  #       remoteRefPath: ""
+  #   targetTemplate: {}
