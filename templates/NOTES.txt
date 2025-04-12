@@ -2,11 +2,15 @@
 CHART NAME: {{ .Chart.Name }}
 CHART VERSION: {{ .Chart.Version }}
 
+{{- if .Values.secrets }}
 Secrets have been created successfully. You can access them using the following command:
 kubectl get secret --namespace {{ .Release.Namespace }} {{ tpl .Values.secretName . }} -o jsonpath='{.data}'
 
 {{- range $extraObject := .Values.extraObjects }}
 {{- if $extraObject.secrets }}
 kubectl get secret --namespace {{ $.Release.Namespace }} {{ tpl $extraObject.secretName . }} -o jsonpath='{.data}'
-{{ end -}}
-{{ end -}}
+{{- end }}
+{{- end }}
+{{- else }}
+No secrets were provided. Please provide at least one secret in the secrets array.
+{{- end }}
