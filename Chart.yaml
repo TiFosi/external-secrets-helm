@@ -2,8 +2,8 @@ apiVersion: v2
 name: external-secrets
 description: This Chart allows to deploy external-secrets for External Secrets Operator
 type: application
-version: 0.3.1
-appVersion: "0.15.1" # External Secrets Operator version
+version: 0.4.0
+appVersion: "0.17.0" # External Secrets Operator version
 
 home: https://github.com/TiFosi/external-secrets-helm
 keywords:
