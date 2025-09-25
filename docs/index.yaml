@@ -3,7 +3,29 @@ entries:
   external-secrets:
   - apiVersion: v2
     appVersion: 0.15.1
-    created: "2025-05-14T01:27:39.040387647+02:00"
+    created: "2025-09-25T02:06:39.024676595+02:00"
+    description: This Chart allows to deploy external-secrets for External Secrets
+      Operator
+    digest: e49d72bceb77bff99a1dfd4a1c996011339505017e53ed3a6a924c020c86cc11
+    home: https://github.com/TiFosi/external-secrets-helm
+    keywords:
+    - secrets
+    - external-secrets
+    - external-secrets-operator
+    - eso
+    maintainers:
+    - email: faouzi.abdeljaoued@gmail.com
+      name: Faouzi ABDELJAOUED
+    name: external-secrets
+    sources:
+    - https://github.com/TiFosi/external-secrets-helm
+    type: application
+    urls:
+    - https://tifosi.github.io/external-secrets-helm/external-secrets-0.3.2.tgz
+    version: 0.3.2
+  - apiVersion: v2
+    appVersion: 0.15.1
+    created: "2025-09-25T02:06:39.018732362+02:00"
     description: This Chart allows to deploy external-secrets for External Secrets
       Operator
     digest: 1f245573b59be2efb6b2fd32e90f27d374124bcd47d264d4b33a37afe6b973ad
@@ -25,7 +47,7 @@ entries:
     version: 0.3.1
   - apiVersion: v2
     appVersion: 0.15.1
-    created: "2025-05-14T01:27:39.03879558+02:00"
+    created: "2025-09-25T02:06:39.014828794+02:00"
     description: This Chart allows to deploy external-secrets for External Secrets
       Operator
     digest: 34937c3ea3246b5758b3218b341f1e346bd7e8cdedc515a83fb2975f856ce5c9
@@ -47,7 +69,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 0.15.1
-    created: "2025-05-14T01:27:39.037796032+02:00"
+    created: "2025-09-25T02:06:39.012383247+02:00"
     description: This Chart allows to deploy external-secrets for External Secrets
       Operator
     digest: 8cbb3ee895edcf390b04b3cf048ed97b835e196a7b68eca0d5217e87c521e0ed
@@ -69,7 +91,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 0.15.1
-    created: "2025-05-14T01:27:39.036995344+02:00"
+    created: "2025-09-25T02:06:39.011293844+02:00"
     description: This Chart allows to deploy external-secrets for External Secrets
       Operator
     digest: 6b5d4d26899b587ecf741f5acb5cc5ce701f519d4d794e092c8a38d2f015bf33
@@ -89,4 +111,4 @@ entries:
     urls:
     - https://tifosi.github.io/external-secrets-helm/external-secrets-0.1.0.tgz
     version: 0.1.0
-generated: "2025-05-14T01:27:39.036352437+02:00"
+generated: "2025-09-25T02:06:39.01034781+02:00"
