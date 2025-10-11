@@ -17,12 +17,15 @@
 ## @extra secrets.[].remoteKey The key of the secret in the external store if it is different from `secrets.[].key`.
 ## @param targetTemplate Use this to set a custom template for the target secret (see https://external-secrets.io/latest/guides/templating/). This is useful for advanced use cases where you want to customize the secret data or type.
 storeName: ""
+storeKind: "ClusterSecretStore"
+creationPolicy: "Owner"
 secretName: "{{ .Release.Name }}-external-secret"
 refreshInterval: "1h"
 remoteRefPath: "secret/path/in/vault"
-pushsecret: {}
-secrets: []
-  # - key: ""
+pushsecret:
+  enabled: false
+secrets: {}
+  # key:
   #   remoteKey: ""
   #   remoteRefPath: ""
 targetTemplate: {}
@@ -38,7 +41,7 @@ extraObjects: []
   #   refreshInterval: ""
   #   remoteRefPath: ""
   #   secrets:
-  #     - key: ""
+  #     key:
   #       remoteKey: ""
   #       remoteRefPath: ""
   #   targetTemplate: {}
