@@ -20,6 +20,7 @@ storeName: ""
 secretName: "{{ .Release.Name }}-external-secret"
 refreshInterval: "1h"
 remoteRefPath: "secret/path/in/vault"
+pushsecret: {}
 secrets: []
   # - key: ""
   #   remoteKey: ""
